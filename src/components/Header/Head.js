@@ -5,42 +5,50 @@ import logo from '../../assets/images/logo.jpg';
 import Awareness from '../../pages/Awareness/Awareness';
 import Information from '../../pages/Information/Information';
 import Home from '../../pages/Home/Home';
-import './style.css'
+import './style.css';
 
 function Head() {
   return (
     <Router>
       <div className="header">
         <div className="left">
-          <img src={logo} alt="logo" className='logo'/>
+          <img src={logo} alt="logo" className="logo" />
         </div>
         <div>
-          <ul className="right" >
+          <ul className="right">
             <li>
-              <Link to="/" className="link"> Home </Link>
+              <Link to="/" className="link">
+                {' '}
+                Home{' '}
+              </Link>
             </li>
             <li>
-              <Link to="/info" className="link"> Information </Link>
+              <Link to="/info" className="link">
+                {' '}
+                Information{' '}
+              </Link>
             </li>
             <li>
-              <Link to="/awareness" className="link"> Awareness </Link>
+              <Link to="/awareness" className="link">
+                {' '}
+                Awareness{' '}
+              </Link>
             </li>
           </ul>
-          </div>
-          </div>
+        </div>
+      </div>
 
-          <Switch>
-            <Route path="/info">
-              <Information />
-            </Route>
-            <Route path="/awareness">
-              <Awareness />
-            </Route>
-            <Route exact path="/">
-              <Home />
-            </Route>
-          </Switch>
-      
+      <Switch>
+        <Route path="/info">
+          <Information />
+        </Route>
+        <Route path="/awareness">
+          <Awareness />
+        </Route>
+        <Route exact path="/">
+          <Home />
+        </Route>
+      </Switch>
     </Router>
   );
 }

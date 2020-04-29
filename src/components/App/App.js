@@ -8,6 +8,6 @@ function App() {
       <Head />
     </>
   );
-};
+}
 
 export default App;
