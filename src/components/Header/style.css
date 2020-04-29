@@ -10,22 +10,23 @@
 
 .logo {
     width: 5rem;
-    height: 5rem;
+    height: 4rem;
 }
 
 .right {
     display: flex;
     width: 20rem;
-    height: 5rem;
+    height: 4rem;
 }
 
 .right li {
-    padding-top: 2rem;
+    padding-top: 1rem;
     list-style: none;
 }
 
 .link {
     text-decoration: none;
+    font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
 }
 
