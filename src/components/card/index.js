@@ -50,15 +50,15 @@ const cardView = ({ name, confirmed, recovered, deaths }) => {
 
 cardView.propTypes = {
   name: PropTypes.string,
-  deaths: PropTypes.string,
-  recovered: PropTypes.string,
-  confirmed: PropTypes.string,
+  deaths: PropTypes.number,
+  recovered: PropTypes.number,
+  confirmed: PropTypes.number,
 };
 cardView.defaultProps = {
   name: '',
-  deaths: '0',
-  recovered: '0',
-  confirmed: '0',
+  deaths: 0,
+  recovered: 0,
+  confirmed: 0,
 };
 
 export default cardView;
