@@ -130,7 +130,7 @@ function Info() {
         </Title>
       </Typography>
       {Images.map((e) => (
-        <Card.Grid style={gridStyle}>
+        <Card.Grid style={gridStyle} key={e}>
           <img src={e} alt="Covid-19" style={imageStyle} />
         </Card.Grid>
       ))}
