@@ -1,0 +1,10 @@
+.grid {
+  display: flex;
+  align-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin: 5rem;
+}
+.image {
+  width: 10rem;
+}
