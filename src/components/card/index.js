@@ -8,12 +8,16 @@ import './index.css';
 
 const gridStyle = {
   textAlign: 'center',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
 };
 const cardView = ({ location, confirmed, recovered, deaths }) => {
   return (
     <div className="card">
       <Card title={location}>
         <Card.Grid style={gridStyle}>
+          <span>𝗖𝗢𝗡𝗙𝗜𝗥𝗠𝗘𝗗</span>
           <Avatar
             style={{
               backgroundColor: '#87d068',
@@ -24,9 +28,10 @@ const cardView = ({ location, confirmed, recovered, deaths }) => {
           {confirmed}
         </Card.Grid>
         <Card.Grid style={gridStyle}>
+          <span>𝗥𝗘𝗖𝗢𝗩𝗘𝗥𝗘𝗗</span>
           <Avatar
             style={{
-              backgroundColor: '#47C4F4',
+              backgroundColor: '#15a0d1',
               margin: '1rem',
             }}
             icon={<UserOutlined />}
@@ -34,6 +39,7 @@ const cardView = ({ location, confirmed, recovered, deaths }) => {
           {recovered}
         </Card.Grid>
         <Card.Grid style={gridStyle}>
+          <span>𝗗𝗘𝗔𝗧𝗛𝗦</span>
           <Avatar
             style={{
               backgroundColor: '#D6242C',
