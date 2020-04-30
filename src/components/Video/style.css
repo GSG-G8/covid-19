@@ -1,9 +1,9 @@
 * {
-    margin: 0;
+  margin: 0;
 }
 
 .video {
-    width: 50%;
-    border-left: 1px solid #F0F0F0;
-    padding: 1rem;
+  width: auto;
+  border-left: 1px solid #f0f0f0;
+  padding: 1rem;
 }
