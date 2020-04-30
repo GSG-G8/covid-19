@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useReducer } from 'react';
+import React, { useEffect, useState } from 'react';
 import './style.css';
 import axios from 'axios';
 import Loading from '../Spin/Spin';
@@ -12,7 +12,7 @@ const Search = () => {
   const [country, setCountry] = useState();
   const [result, setResult] = useState();
   const [cases, setCases] = useState();
-  const [location, setLocation] = useState('Global');
+  const [location, setLocation] = useState('GLOBAL');
 
   useEffect(() => {
     const source = axios.CancelToken.source();
@@ -29,9 +29,11 @@ const Search = () => {
     return () => source.cancel();
   }, []);
 
-  useReducer(() => {
-    setCases(result[location].All);
-  }, [location]);
+  useEffect(() => {
+    if (location !== 'GLOBAL') {
+      setCases(result[location].All);
+    }
+  }, [location, result]);
 
   return (
     <div className="Search">
