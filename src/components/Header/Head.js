@@ -18,20 +18,17 @@ function Head() {
           <ul className="right">
             <li>
               <Link to="/" className="link">
-                {' '}
-                Home{' '}
+                Home
               </Link>
             </li>
             <li>
               <Link to="/info" className="link">
-                {' '}
-                Information{' '}
+                Information
               </Link>
             </li>
             <li>
               <Link to="/awareness" className="link">
-                {' '}
-                Awareness{' '}
+                Live Map
               </Link>
             </li>
           </ul>
