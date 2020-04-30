@@ -1,28 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './style.css';
-import axios from 'axios';
+import Search from '../../components/Search/Search';
+import Embed from '../../components/Video/Empedvideo';
 
-const URL =
-  'https://cors-anywhere.herokuapp.com/https://covid-api.mmediagroup.fr/v1/cases';
-
-function Home() {
-  const [country, setCountry] = useState();
-  useEffect(() => {
-    const source = axios.CancelToken.source();
-    axios
-      .get(URL, {
-        cancelToken: source.token,
-      })
-      .then((result) => setCountry(Object.keys(result.data)))
-      .catch(() => 'there is no data');
-    return () => source.cancel();
-  }, []);
-
+const Home = () => {
   return (
     <div className="home">
-      <h1> </h1>
+      <Search />
+      <Embed />
     </div>
   );
-}
+};
 
 export default Home;

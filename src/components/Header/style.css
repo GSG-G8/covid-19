@@ -4,8 +4,9 @@
 
 .header {
     padding-top: .2rem;
+    height: 3.5rem;
     display: flex;
-    background-color: #F2F2F2;
+    background-color: rgb(252, 249, 249)
 }
 
 .logo {
@@ -23,12 +24,13 @@
 .right li {
     padding-top: 1rem;
     list-style: none;
+    color: rgb(71, 196, 244);
 }
 
 .link {
     text-decoration: none;
     font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: monospace;
 }
 
 .right li :hover {

@@ -9,10 +9,10 @@ import './index.css';
 const gridStyle = {
   textAlign: 'center',
 };
-const cardView = ({ name, confirmed, recovered, deaths }) => {
+const cardView = ({ location, confirmed, recovered, deaths }) => {
   return (
     <div className="card">
-      <Card title={name}>
+      <Card title={location}>
         <Card.Grid style={gridStyle}>
           <Avatar
             style={{
@@ -49,13 +49,13 @@ const cardView = ({ name, confirmed, recovered, deaths }) => {
 };
 
 cardView.propTypes = {
-  name: PropTypes.string,
+  location: PropTypes.string,
   deaths: PropTypes.number,
   recovered: PropTypes.number,
   confirmed: PropTypes.number,
 };
 cardView.defaultProps = {
-  name: '',
+  location: '',
   deaths: 0,
   recovered: 0,
   confirmed: 0,
