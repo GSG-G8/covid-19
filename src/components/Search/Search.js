@@ -20,10 +20,10 @@ const Search = () => {
       .get(URL, {
         cancelToken: source.token,
       })
-      .then((result) => {
-        setCountry(Object.keys(result.data));
-        setResult(result.data);
-        setCases(result.data.Global.All);
+      .then((response) => {
+        setCountry(Object.keys(response.data));
+        setResult(response.data);
+        setCases(response.data.Global.All);
       })
       .catch(() => 'there is no data');
     return () => source.cancel();
