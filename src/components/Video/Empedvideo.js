@@ -17,8 +17,8 @@ EmpedVideo.propTypes = {
 };
 EmpedVideo.defaultProps = {
   url: 'https://youtu.be/PSnSo9kYlH4',
-  width: '35rem',
-  height: '20rem',
+  width: '30rem',
+  height: '15rem',
 };
 
 export default EmpedVideo;
